@@ -1,0 +1,136 @@
+2026-03-25T20:13:28.827+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] e.d.e.ExtraEstudiantesMvcApplication     : Starting ExtraEstudiantesMvcApplication using Java 21.0.9 with PID 26272 (C:\Users\eduar\OneDrive\Documentos\2_DAW\Desarrollo web en entorno servidor\Spring_EXTRA\EXTRA_Estudiantes_MVC\target\classes started by eduar in C:\Users\eduar\OneDrive\Documentos\2_DAW\Desarrollo web en entorno servidor\Spring_EXTRA\EXTRA_Estudiantes_MVC)
+2026-03-25T20:13:28.839+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] e.d.e.ExtraEstudiantesMvcApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T20:13:28.990+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-25T20:13:28.991+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-25T20:13:31.220+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25T20:13:31.423+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170 ms. Found 2 JPA repository interfaces.
+2026-03-25T20:13:32.871+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-25T20:13:32.901+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T20:13:32.902+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T20:13:33.004+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4012 ms
+2026-03-25T20:13:33.192+01:00  WARN 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [2082B7C510D9246EFD5785E3BFB92607]
+2026-03-25T20:13:33.498+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-25T20:13:33.904+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:estudiantes user=SA
+2026-03-25T20:13:33.908+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-25T20:13:33.975+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-25T20:13:34.175+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-25T20:13:35.516+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25T20:13:35.784+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:estudiantes]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: ESTUDIANTES/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-25T20:13:38.776+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25T20:13:38.911+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T20:13:39.115+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-25T20:13:39.662+01:00  WARN 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25T20:13:39.891+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-25T20:13:39.892+01:00  WARN 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-25T20:13:41.042+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:estudiantes'
+2026-03-25T20:13:41.210+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-03-25T20:13:41.220+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [restartedMain] e.d.e.ExtraEstudiantesMvcApplication     : Started ExtraEstudiantesMvcApplication in 13.654 seconds (process running for 15.849)
+2026-03-25T20:14:14.273+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-25T20:14:14.299+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-25T20:14:14.309+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T20:14:14.327+01:00  WARN 26272 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-03-25T20:14:14.328+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-25T20:14:14.332+01:00  INFO 26272 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-25T20:18:17.538+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] e.d.e.ExtraEstudiantesMvcApplication     : Starting ExtraEstudiantesMvcApplication using Java 21.0.9 with PID 9484 (C:\Users\eduar\OneDrive\Documentos\2_DAW\Desarrollo web en entorno servidor\Spring_EXTRA\EXTRA_Estudiantes_MVC\target\classes started by eduar in C:\Users\eduar\OneDrive\Documentos\2_DAW\Desarrollo web en entorno servidor\Spring_EXTRA\EXTRA_Estudiantes_MVC)
+2026-03-25T20:18:17.547+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] e.d.e.ExtraEstudiantesMvcApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T20:18:17.680+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-25T20:18:17.681+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-25T20:18:19.300+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25T20:18:19.430+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 2 JPA repository interfaces.
+2026-03-25T20:18:20.871+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-25T20:18:20.900+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T20:18:20.901+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T20:18:21.006+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3324 ms
+2026-03-25T20:18:21.426+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-25T20:18:21.856+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:estudiantes user=SA
+2026-03-25T20:18:21.860+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-25T20:18:21.928+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-25T20:18:22.110+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-25T20:18:23.453+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25T20:18:23.683+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:estudiantes]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: ESTUDIANTES/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-25T20:18:26.047+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25T20:18:26.179+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T20:18:26.399+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-25T20:18:26.951+01:00  WARN 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25T20:18:27.184+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-25T20:18:27.185+01:00  WARN 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-25T20:18:28.326+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:estudiantes'
+2026-03-25T20:18:28.496+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-03-25T20:18:28.505+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [restartedMain] e.d.e.ExtraEstudiantesMvcApplication     : Started ExtraEstudiantesMvcApplication in 12.925 seconds (process running for 15.39)
+2026-03-25T20:24:21.879+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-25T20:24:21.922+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-25T20:24:21.942+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T20:24:21.981+01:00  WARN 9484 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-03-25T20:24:21.982+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-25T20:24:21.987+01:00  INFO 9484 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-25T20:24:33.565+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] e.d.e.ExtraEstudiantesMvcApplication     : Starting ExtraEstudiantesMvcApplication using Java 21.0.9 with PID 26092 (C:\Users\eduar\OneDrive\Documentos\2_DAW\Desarrollo web en entorno servidor\Spring_EXTRA\EXTRA_Estudiantes_MVC\target\classes started by eduar in C:\Users\eduar\OneDrive\Documentos\2_DAW\Desarrollo web en entorno servidor\Spring_EXTRA\EXTRA_Estudiantes_MVC)
+2026-03-25T20:24:33.573+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] e.d.e.ExtraEstudiantesMvcApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-03-25T20:24:33.706+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-25T20:24:33.707+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-25T20:24:35.552+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-25T20:24:35.709+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130 ms. Found 2 JPA repository interfaces.
+2026-03-25T20:24:37.222+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-03-25T20:24:37.253+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-25T20:24:37.253+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.18]
+2026-03-25T20:24:37.357+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3649 ms
+2026-03-25T20:24:37.795+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-25T20:24:38.204+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:estudiantes user=SA
+2026-03-25T20:24:38.209+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-25T20:24:38.276+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-25T20:24:38.468+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-03-25T20:24:39.783+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-25T20:24:39.991+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:estudiantes]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: ESTUDIANTES/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-25T20:24:42.365+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-25T20:24:42.512+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T20:24:42.750+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-25T20:24:43.380+01:00  WARN 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-25T20:24:43.615+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-25T20:24:43.615+01:00  WARN 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-25T20:24:44.864+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:estudiantes'
+2026-03-25T20:24:45.062+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-03-25T20:24:45.077+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [restartedMain] e.d.e.ExtraEstudiantesMvcApplication     : Started ExtraEstudiantesMvcApplication in 12.744 seconds (process running for 14.858)
+2026-03-25T20:25:03.388+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-25T20:25:03.389+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-25T20:25:03.393+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-03-25T20:30:45.593+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-25T20:30:45.623+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-03-25T20:30:45.642+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-25T20:30:45.683+01:00  WARN 26092 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: La base de datos ya esta cerrada (para des-habilitar el cerrado automatico durante el shutdown de la VM, agregue ";DB_CLOSE_ON_EXIT=FALSE" a la URL de conexión)
+Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-03-25T20:30:45.684+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-25T20:30:45.689+01:00  INFO 26092 --- [EXTRA_Estudiantes_MVC] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
