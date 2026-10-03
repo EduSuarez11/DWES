@@ -19,7 +19,8 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Long> {
         h.doble,
         h.precioNoche,
         h.incluyeDesayuno,
-        h.ocupada
+        h.ocupada,
+        htl.codigo
     ) FROM Habitacion h JOIN h.hotel htl
         WHERE h.precioNoche >= :precioMinimo
             AND h.precioNoche <= :precioMaximo

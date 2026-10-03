@@ -8,5 +8,6 @@ public record HabitacionResponseDto(
    boolean doble,
    BigDecimal precioNoche,
    boolean incluyeDesayuno,
-   boolean ocupada
+   boolean ocupada,
+   String codigoHotel
 ) {}

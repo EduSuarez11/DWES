@@ -14,7 +14,8 @@ public class HabitacionMapper {
                 habitacion.isDoble(),
                 habitacion.getPrecioNoche(),
                 habitacion.isIncluyeDesayuno(),
-                habitacion.isOcupada()
+                habitacion.isOcupada(),
+                habitacion.getHotel().getCodigo()
         );
     }
 }

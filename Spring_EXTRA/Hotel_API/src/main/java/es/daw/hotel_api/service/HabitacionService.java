@@ -35,6 +35,7 @@ public class HabitacionService {
             log.info("Busca por codigo hotel");
             Hotel hotel = hotelRepository.findByCodigo(codHotel)
                     .orElseThrow(() -> new HotelNotFoundException("Hotel no encontrado"));
+
             habitaciones = new ArrayList<>();
             hotel.getHabitaciones().forEach(habitacion -> {
                 if (!habitacion.isOcupada()) {

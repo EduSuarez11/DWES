@@ -41,7 +41,7 @@ public class HabitacionController {
      * @param codHotel
      * @return
      */
-    @PostMapping("{codigoHotel}")
+    @PostMapping("/{codigoHotel}")
     public ResponseEntity<HabitacionResponseDto> assignRoomToHotel(
             @RequestBody HabitacionRequestDto dto,
             @PathVariable("codigoHotel") String codHotel
@@ -50,7 +50,7 @@ public class HabitacionController {
     }
 
 
-    @DeleteMapping("{codigoHabitacion}")
+    @DeleteMapping("/{codigoHabitacion}")
     public ResponseEntity<Void> deleteRoom(
             @PathVariable("codigoHabitacion") String codigoHabitacion
     ) {
