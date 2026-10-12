@@ -16,25 +16,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/auth")
+//@RequestMapping("/login")
 @RequiredArgsConstructor
 public class AuthController {
 
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
 
-    @PostMapping("/login")
-    public ResponseEntity<AuthResponse> auth(
-            @RequestBody AuthRequest authRequest
-    ) {
-        Authentication a = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(authRequest.username(), authRequest.password())
-        );
-
-        UserDetails userDetails = (UserDetails) a.getPrincipal();
-
-        if (userDetails == null) return null;
-
-        return ResponseEntity.status(HttpStatus.OK).body(new AuthResponse(jwtService.generateToken(userDetails)));
-    }
+//    @PostMapping()
+//    public ResponseEntity<AuthResponse> auth(
+//            @RequestBody AuthRequest authRequest
+//    ) {
+//        Authentication a = authenticationManager.authenticate(
+//                new UsernamePasswordAuthenticationToken(authRequest.username(), authRequest.password())
+//        );
+//
+//        UserDetails userDetails = (UserDetails) a.getPrincipal();
+//
+//        if (userDetails == null) return null;
+//
+//        return ResponseEntity.status(HttpStatus.OK).body(new AuthResponse(jwtService.generateToken(userDetails)));
+//    }
 }
