@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<body>
+<header class="bg-white border-bottom shadow-sm" th:fragment="header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a th:href="@{/home}" class="navbar-brand fw-bold fs-4 text-dark">ReservaTuHotel</a>
+            <!-- ================================================= ZONA DERECHA ================================================= -->
+            <div class="d-flex align-items-center">
+
+                <!-- ============================================= USUARIO NO LOGUEADO Mostrar cuando NO esté autenticado ============================================= -->
+                <div class="guest-actions" th:if="${!#authorization.expression('isAuthenticated()')}">
+                    <a th:href="@{/login}" class="btn btn-dark px-4" >Iniciar sesión</a>
+                </div>
+
+                <!-- ============================================= USUARIO LOGUEADO Mostrar cuando esté autenticado ============================================= -->
+                <form method="post" th:action="@{/logout}" th:if="${#authorization.expression('isAuthenticated()')}">
+                    <div class="user-actions align-items-center gap-3">
+                        <div class="d-flex align-items-center gap-2">
+<!--                            <div class="bg-dark text-white rounded-circle d-flex align-items-center justify-content-center fw-bold"-->
+<!--                                 style="width: 40px; height: 40px;">-->
+<!--                            </div>-->
+                            <div class="d-flex flex-column lh-sm">
+                                <small class="text-secondary"> Usuario</small>
+                                <span class="fw-semibold" th:text="${#authentication.name}"> user1 </span>
+                            </div>
+
+                            <button type="submit" class="btn btn-outline-secondary">Cerrar sesión</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+</body>
+</html>

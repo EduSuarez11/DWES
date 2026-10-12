@@ -34,7 +34,7 @@ public class HabitacionController {
     ) {
         log.info("Codigo Habitacion: {}", dto.codigo());
         log.info("Codigo Hotel: {}", dto.hotelCodigo());
-        //habitacionService.removeRoomByCode(dto.codigo());
+        habitacionService.removeRoomByCode(dto.codigo());
         ra.addFlashAttribute("msg", "Habitación eliminada correctamente");
 
         return "redirect:/habitaciones/"+ dto.hotelCodigo() + "/buscar";
