@@ -3,6 +3,7 @@ package es.daw.hotel_api.security;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -33,8 +34,8 @@ public class SecurityConfig {
                 .headers(headers -> headers.frameOptions(frame -> frame.disable())) // permitir iframes (para H2)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/**","/h2-console/**").permitAll()
-                        //.anyRequest().permitAll() // para acceso público
-                        // PENDIENTE!!! REGLA DE ACCESO AL ENDPOINT POST /api/appointments
+                        .requestMatchers(HttpMethod.DELETE, "/habitaciones/*").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/habitaciones/*").hasRole("ADMIN")
                         .anyRequest().permitAll()
                 )
                 .authenticationProvider(authenticationProvider)

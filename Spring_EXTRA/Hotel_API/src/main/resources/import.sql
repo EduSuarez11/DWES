@@ -32,6 +32,3 @@ INSERT INTO habitacion (codigo, tamano, doble, precio_noche, incluye_desayuno, o
 INSERT INTO habitacion (codigo, tamano, doble, precio_noche, incluye_desayuno, ocupada, hotel_id) VALUES ('HAB-017-A', 30, true, 100.0, true, false, 6);
 INSERT INTO habitacion (codigo, tamano, doble, precio_noche, incluye_desayuno, ocupada, hotel_id) VALUES ('HAB-018-A', 25, true, 90.0, false, true, 6);
 
-
-
--- pendiente: añadir más roles a usuarios

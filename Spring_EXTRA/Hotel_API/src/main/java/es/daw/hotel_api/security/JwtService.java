@@ -19,7 +19,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
 public class JwtService {
 
     @Value("${jwt.secret}")

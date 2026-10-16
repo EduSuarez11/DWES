@@ -27,5 +27,10 @@ public class GlobalHandleException {
     public ResponseEntity<ErrorResponseDto> categoriaNotFoundException(CategoriaNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ErrorResponseDto(LocalDateTime.now(), ex.getMessage()));
     }
+
+    @ExceptionHandler(HabitacionOcupadaException.class)
+    public ResponseEntity<ErrorResponseDto> habitacionOcupadaException(HabitacionOcupadaException ex) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(new ErrorResponseDto(LocalDateTime.now(), ex.getMessage()));
+    }
 }
 

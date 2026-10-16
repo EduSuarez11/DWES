@@ -49,7 +49,11 @@ public class HabitacionController {
         return ResponseEntity.status(HttpStatus.OK).body(habitacionService.registerRoom(dto, codHotel));
     }
 
-
+    /**
+     * Endpoint para eliminar una habitacion de un hotel - 204 No Content
+     * @param codigoHabitacion
+     * @return
+     */
     @DeleteMapping("/{codigoHabitacion}")
     public ResponseEntity<Void> deleteRoom(
             @PathVariable("codigoHabitacion") String codigoHabitacion
@@ -57,4 +61,26 @@ public class HabitacionController {
         habitacionService.deleteRoom(codigoHabitacion);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
+
+    /**
+     * Endpoint para ocupar una habitacion - 200 Ok
+     */
+    @PatchMapping("/ocupar/{codigoHabitacion}")
+    public ResponseEntity<List<HabitacionResponseDto>> occupyRoom(
+            @PathVariable("codigoHabitacion") String codigoHab
+            //@RequestBody HotelCodigoRequestDto codigoHotel
+    ) {
+        return ResponseEntity.status(HttpStatus.OK).body(habitacionService.occupyRoom(codigoHab));
+    }
+
+
+    /**
+     * Endpoint para obtener las habitaciones ocupadas
+     * @return
+     */
+    @GetMapping("/reservadas")
+    public ResponseEntity<List<HabitacionResponseDto>> getOccupiedRooms() {
+        return ResponseEntity.status(HttpStatus.OK).body(habitacionService.getOccupiedRooms());
+    }
 }
+

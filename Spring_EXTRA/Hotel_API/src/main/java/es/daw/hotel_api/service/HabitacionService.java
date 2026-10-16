@@ -2,6 +2,7 @@ package es.daw.hotel_api.service;
 
 import es.daw.hotel_api.dto.habitacion.HabitacionRequestDto;
 import es.daw.hotel_api.dto.habitacion.HabitacionResponseDto;
+import es.daw.hotel_api.dto.hotel.codigo.HotelCodigoRequestDto;
 import es.daw.hotel_api.entity.Habitacion;
 import es.daw.hotel_api.entity.Hotel;
 import es.daw.hotel_api.exception.HabitacionNotFoundException;
@@ -15,6 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -50,7 +52,7 @@ public class HabitacionService {
         }
 
         return habitaciones.stream()
-                .map(HabitacionMapper::habitacionToHabitacionResponseDto)
+                .map(HabitacionMapper::toHabitacionResponseDto)
                 .toList();
     }
 
@@ -69,7 +71,7 @@ public class HabitacionService {
 
         hotel.addHabitacion(habitacion);
 
-        return HabitacionMapper.habitacionToHabitacionResponseDto(habitacion);
+        return HabitacionMapper.toHabitacionResponseDto(habitacion);
     }
 
 
@@ -80,5 +82,29 @@ public class HabitacionService {
 
         log.info("Habitacion con Hotel: {} eliminada", habitacion.getHotel());
         habitacion.getHotel().removeHabitacion(habitacion);
+    }
+
+
+    @Transactional
+    public List<HabitacionResponseDto> occupyRoom(String codigoHab) {
+//        Hotel hotel = hotelRepository.findByCodigo(dto.codigoHotel())
+//                .orElseThrow(() -> new HotelNotFoundException("Hotel no encontrado"));
+        Habitacion habitacion = habitacionRepository.findByCodigo(codigoHab)
+                .orElseThrow(() -> new HabitacionNotFoundException("La habitación no existe"));
+        Hotel hotel = habitacion.getHotel();
+
+        habitacion.setOcupada(true);
+
+        return hotel.getHabitaciones().stream()
+                .map(HabitacionMapper::toHabitacionResponseDto)
+                .toList();
+    }
+
+
+
+    public List<HabitacionResponseDto> getOccupiedRooms() {
+        List<HabitacionResponseDto> habitaciones = habitacionRepository.findByOccupiedRoom();
+
+        return habitaciones != null ? habitaciones : List.of();
     }
 }

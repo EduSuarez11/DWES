@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class HabitacionMapper {
 
-    public static HabitacionResponseDto habitacionToHabitacionResponseDto(Habitacion habitacion) {
+    public static HabitacionResponseDto toHabitacionResponseDto(Habitacion habitacion) {
         return new HabitacionResponseDto(
                 habitacion.getCodigo(),
                 habitacion.getTamano(),

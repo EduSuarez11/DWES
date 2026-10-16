@@ -33,4 +33,20 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Long> {
             @Param("precioMaximo") int precioMaximo,
             @Param("precioMinimo") int precioMinimo
     );
+
+    @Query("""
+        SELECT new es.daw.hotel_api.dto.habitacion.HabitacionResponseDto(
+            hab.codigo,
+            hab.tamano,
+            hab.doble,
+            hab.precioNoche,
+            hab.incluyeDesayuno,
+            hab.ocupada,
+            hot.codigo
+        )
+        FROM Habitacion hab
+            JOIN hab.hotel hot
+            WHERE hab.ocupada = true
+    """)
+    List<HabitacionResponseDto> findByOccupiedRoom();
 }

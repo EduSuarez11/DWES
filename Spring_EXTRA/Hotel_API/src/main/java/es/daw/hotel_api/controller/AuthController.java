@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class AuthController {
 
-    private final JwtService jwtService;
-    private final AuthenticationManager authenticationManager;
+//    private final JwtService jwtService;
+//    private final AuthenticationManager authenticationManager;
 
 //    @PostMapping()
 //    public ResponseEntity<AuthResponse> auth(
