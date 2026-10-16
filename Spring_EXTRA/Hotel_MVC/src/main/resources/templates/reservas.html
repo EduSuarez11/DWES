@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head th:replace="~{fragments/head :: head('Reservas')}">
+</head>
+<body>
+
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="container py-4 py-lg-5">
+    <!-- =====================================================
+         TÍTULO Y RESUMEN
+         ===================================================== -->
+    <section class="mb-4">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+            <div>
+                <span class="badge text-bg-primary mb-2">Gestión hotelera</span>
+                <h1 class="display-6 fw-bold mb-2">Reservas</h1>
+                <p class="text-secondary mb-0">Consulta las habitaciones, sus características y su disponibilidad.</p>
+            </div>
+
+            <div class="bg-white border rounded-3 shadow-sm p-3">
+                <span class="text-secondary d-block small">Total de reservas</span>
+
+                <span class="fs-3 fw-bold" th:text="${reservas == null ? 0 : #lists.size(reservas)}">0</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LISTADO DE RESERVAS -->
+    <section aria-label="Listado de reservas">
+        <div class="row g-4" th:if="${reservas != null and !#lists.isEmpty(reservas)}">
+            <!-- Una tarjeta por cada reserva -->
+            <div class="col-12" th:each="reserva, iterStat : ${reservas}">
+                <article class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <!-- Cabecera de la tarjeta -->
+                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
+                            <div>
+                                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                                    <span class="badge text-bg-primary" th:text="${reserva.codigoHotel}">HOT-001</span>
+                                    <span class="badge text-bg-light border text-dark" th:text="'Reserva #' + ${iterStat.count}">Reserva #1</span>
+                                </div>
+
+                                <h2 class="h4 fw-bold mb-1" th:text="${reserva.codigo}">Habitación 1</h2>
+                                <p class="text-secondary mb-0">Información de la habitación asociada.</p>
+                            </div>
+                        </div>
+
+                        <!-- Información de la habitación -->
+                        <div class="row g-3">
+                            <!-- Tamaño -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="bg-light rounded-3 p-3 h-100">
+                                    <span class="text-secondary small d-block mb-2">Tamaño de la habitación</span>
+                                    <span class="fs-5 fw-semibold" th:text="${reserva.tamano}">10</span>
+                                </div>
+                            </div>
+
+                            <!-- Habitación doble -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="bg-light rounded-3 p-3 h-100">
+                                    <span class="text-secondary small d-block mb-2">Habitación doble</span>
+                                    <span class="badge rounded-pill" th:classappend="${reserva.doble} ? 'text-bg-success' : 'text-bg-secondary'"
+                                          th:text="${reserva.doble} ? 'Sí' : 'No'">
+                                        No
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Precio por noche -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="bg-light rounded-3 p-3 h-100">
+                                    <span class="text-secondary small d-block mb-2">Precio por noche</span>
+
+                                    <span class="fs-5 fw-semibold" th:text="${reserva.precioNoche + ' €'}">75,00 €</span>
+                                </div>
+                            </div>
+
+                            <!-- Desayuno -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="bg-light rounded-3 p-3 h-100">
+                                    <span class="text-secondary small d-block mb-2">Incluye desayuno</span>
+                                    <span class="badge rounded-pill"
+                                          th:classappend="${reserva.incluyeDesayuno} ? ' text-bg-success' : ' text-bg-secondary'"
+                                          th:text="${reserva.incluyeDesayuno} ? 'Sí' : 'No'">
+                                        No
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Ocupación -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="bg-light rounded-3 p-3 h-100">
+                                    <span class="text-secondary small d-block mb-2">Estado de ocupación</span>
+                                    <span class="badge rounded-pill"
+                                          th:classappend="${reserva.ocupada} ? ' text-bg-danger' : ' text-bg-success'"
+                                          th:text="${reserva.ocupada} ? 'Ocupada' : 'Disponible'">
+                                        Disponible
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Código del hotel -->
+                            <div class="col-12 col-sm-6 col-lg-4">
+                                <div class="bg-light rounded-3 p-3 h-100">
+                                    <span class="text-secondary small d-block mb-2">Código del hotel</span>
+                                    <span class="fw-semibold" th:text="${reserva.codigoHotel != null ? reserva.codigoHotel : '---'}">HOT-001</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- ESTADO SIN RESERVAS -->
+        <div class="card border-0 shadow-sm text-center p-4 p-md-5" th:if="${#lists.isEmpty(reservas)}">
+            <div class="card-body">
+                <h2 class="h4 fw-bold mb-3">No hay reservas registradas</h2>
+                <p class="text-secondary mb-0">Cuando existan reservas disponibles, aparecerán en esta sección.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>

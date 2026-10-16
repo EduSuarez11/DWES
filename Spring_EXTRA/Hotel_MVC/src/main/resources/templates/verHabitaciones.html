@@ -25,15 +25,24 @@
                         <strong>Doble:</strong> <span th:text="${habitacion.doble} ? 'Sí' : 'No'">Sí/No</span><br>
                         <strong>Precio por noche:</strong> <span th:text="${habitacion.precioNoche} + ' €'">0.0 €</span><br>
                         <strong>Incluye desayuno:</strong> <span th:text="${habitacion.incluyeDesayuno} ? 'Sí' : 'No'">Sí/No</span><br>
-                        <strong>Ocupada:</strong> <span th:text="${habitacion.ocupada} ? 'Sí' : 'No'">Sí/No</span>
+                        <strong>Ocupada:</strong> <span th:class="${habitacion.ocupada ? 'text-danger' : 'text-success'}" th:text="${habitacion.ocupada} ? 'Sí' : 'No'">Sí/No</span>
                     </p>
 
                     <!-- Solo mostrar el botón si el usuario es ADMIN -->
-                    <form th:if="${session.rol == 'ADMIN'}" th:action="@{/habitaciones/eliminar}" method="post">
-                        <input type="hidden" name="codigo" th:value="${habitacion.codigo}" />
-                        <input type="hidden" name="hotelCodigo" th:value="${habitacion.codigoHotel}" />
-                        <button class="btn btn-danger btn-sm mt-2">Eliminar</button>
-                    </form>
+                    <div class="d-flex justify-content-between" >
+                        <form th:action="@{/habitaciones/eliminar}" th:if="${#authorization.expression('hasRole(''ADMIN'')')}" method="post">
+                            <input type="hidden" name="codigo" th:value="${habitacion.codigo}" />
+                            <input type="hidden" name="hotelCodigo" th:value="${habitacion.codigoHotel}" />
+                            <button class="btn btn-danger btn-sm mt-2">Eliminar</button>
+                        </form>
+
+                        <form th:action="@{/habitaciones/ocupar}" th:if="${#authorization.expression('hasRole(''USER'')')}" method="post">
+                            <input type="hidden" name="codigo" th:value="${habitacion.codigo}" />
+                            <input type="hidden" name="hotelCodigo" th:value="${habitacion.codigoHotel}" />
+                            <button class="btn btn-primary btn-sm mt-2">Reservar habitación</button>
+                        </form>
+                    </div>
+
                 </div>
             </div>
         </div>
