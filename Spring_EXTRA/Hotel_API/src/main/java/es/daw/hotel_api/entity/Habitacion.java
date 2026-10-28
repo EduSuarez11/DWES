@@ -18,7 +18,7 @@ public class Habitacion {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String codigo;
 
     @Column(nullable = false)
@@ -27,7 +27,7 @@ public class Habitacion {
     @Column(nullable = false)
     private boolean doble;
 
-    @Column(nullable = false)
+    @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal precioNoche;
 
     @Column(nullable = false)
