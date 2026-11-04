@@ -4,11 +4,9 @@ import es.daw.hotel_api.dto.auth.register.RegisterRequestDto;
 import es.daw.hotel_api.dto.auth.register.RegisterResponseDto;
 import es.daw.hotel_api.dto.auth.users.AuthUserResponseDto;
 import es.daw.hotel_api.entity.AppUser;
-import es.daw.hotel_api.entity.Role;
 import es.daw.hotel_api.exception.UsernameExistsException;
 import es.daw.hotel_api.mapper.AuthMapper;
 import es.daw.hotel_api.repository.AppUserRepository;
-import es.daw.hotel_api.repository.RoleRepository;
 import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -22,7 +20,6 @@ public class AuthService {
 
     private final AppUserRepository appUserRepository;
     private final AuthMapper authMapper;
-
 
     /// Registro - 201
     @Transactional
