@@ -38,6 +38,7 @@ public class AuthMapper {
         return new RegisterResponseDto(
                 user.getUsername(),
                 user.getFullName(),
+                user.getPassword(),
                 user.getEmail(),
                 user.getRole()
         );

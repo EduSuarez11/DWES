@@ -30,27 +30,19 @@ public class AuthController {
     private final AuthenticationManager authenticationManager;
     private final AuthService authService;
 
-    @PostMapping("/login")
-    public ResponseEntity<AuthResponse> login(
-            @RequestBody AuthRequest authRequest
-    ) {
-        Authentication a = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(authRequest.username(), authRequest.password())
-        );
 
-        UserDetails userDetails = (UserDetails) a.getPrincipal();
-
-        if (userDetails == null) return null;
-
-        return ResponseEntity.status(HttpStatus.OK).body(new AuthResponse(jwtService.generateToken(userDetails)));
-    }
-
+    /**
+     * Registrar un usuario - 201 CREATED
+     * @param dto
+     * @return
+     */
     @PostMapping("/register")
     public ResponseEntity<RegisterResponseDto> register(
             @RequestBody RegisterRequestDto dto
     ) {
         return ResponseEntity.status(HttpStatus.CREATED).body(authService.registerUser(dto));
     }
+
 
     @GetMapping("/users")
     public ResponseEntity<List<AuthUserResponseDto>> findAllUsers() {

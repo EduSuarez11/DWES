@@ -1,4 +1,6 @@
-package es.daw.simulacro.mvc.mvc_hoteles.dto;
+package es.daw.simulacro.mvc.mvc_hoteles.dto.hotel;
+
+import es.daw.simulacro.mvc.mvc_hoteles.dto.categoria.CategoriaResponseDto;
 
 public record HotelResponseDto(
         String codigo,
