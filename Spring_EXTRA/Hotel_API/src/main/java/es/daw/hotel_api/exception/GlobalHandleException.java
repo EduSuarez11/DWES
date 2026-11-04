@@ -32,5 +32,10 @@ public class GlobalHandleException {
     public ResponseEntity<ErrorResponseDto> habitacionOcupadaException(HabitacionOcupadaException ex) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(new ErrorResponseDto(LocalDateTime.now(), ex.getMessage()));
     }
+
+    @ExceptionHandler(UsernameExistsException.class)
+    public ResponseEntity<ErrorResponseDto> usernameExistsException(UsernameExistsException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ErrorResponseDto(LocalDateTime.now(), ex.getMessage()));
+    }
 }
 
