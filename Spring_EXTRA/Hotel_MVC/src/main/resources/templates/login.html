@@ -27,6 +27,8 @@
         <!--  Params  -->
         <div th:if="${param.error}" class="alert alert-danger text-center" th:text="${'Error al iniciar sesión'}"></div>
         <div th:if="${param.logout}" class="alert alert-success text-center" th:text="${'Has cerrado sesión con éxito'}"></div>
+        <div th:if="${message}" class="alert alert-success text-center" th:text="${message}"></div>
+        <div th:if="${error}" class="alert alert-danger text-center" th:text="${error}"></div>
 
         <form th:action="@{/login}" method="post">
             <div class="mb-3">
