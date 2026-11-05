@@ -10,9 +10,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "users")
@@ -42,23 +40,7 @@ public class AppUser implements UserDetails {
     @ManyToOne(fetch = FetchType.EAGER, cascade = { CascadeType.PERSIST, CascadeType.MERGE})
     @JoinColumn(name = "role_id", nullable = false)
     private Role role;
-//    @JoinTable(
-//            name = "users_roles",
-//            joinColumns = @JoinColumn(name="user_id"),
-//            inverseJoinColumns = @JoinColumn(name="role_id")
-//    )
 
-
-
-//    public void addRole(Role role) {
-//        roles.add(role);
-//        role.getUsers().add(this);
-//    }
-//
-//    public void removerRole(Role role) {
-//        roles.remove(role);
-//        role.getUsers().remove(this);
-//    }
 
     // ------------------------------------
 
