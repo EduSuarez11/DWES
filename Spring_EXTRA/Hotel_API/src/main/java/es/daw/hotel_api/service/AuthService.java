@@ -3,6 +3,8 @@ package es.daw.hotel_api.service;
 import es.daw.hotel_api.dto.auth.register.RegisterRequestDto;
 import es.daw.hotel_api.dto.auth.register.RegisterResponseDto;
 import es.daw.hotel_api.dto.auth.users.AuthUserResponseDto;
+import es.daw.hotel_api.dto.auth.users.ReservasUsuarioRequestDto;
+import es.daw.hotel_api.dto.habitacion.HabitacionResponseDto;
 import es.daw.hotel_api.entity.AppUser;
 import es.daw.hotel_api.exception.UsernameExistsException;
 import es.daw.hotel_api.mapper.AuthMapper;
@@ -43,5 +45,15 @@ public class AuthService {
         return users.stream()
                 .map(AuthMapper::toAuthUserResponseDto)
                 .toList();
+    }
+
+    @Transactional
+    public List<HabitacionResponseDto> getReservationsOfUser(ReservasUsuarioRequestDto dto) {
+        AppUser user = appUserRepository.findByUsername(dto.username())
+                .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
+
+
+
+        return null;
     }
 }
