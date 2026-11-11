@@ -1,5 +1,6 @@
 package es.daw.hotel_api.controller;
 
+import es.daw.hotel_api.dto.auth.users.ReservasUsuarioRequestDto;
 import es.daw.hotel_api.dto.habitacion.HabitacionRequestDto;
 import es.daw.hotel_api.dto.habitacion.HabitacionResponseDto;
 import es.daw.hotel_api.service.HabitacionService;
@@ -81,6 +82,13 @@ public class HabitacionController {
     @GetMapping("/reservadas")
     public ResponseEntity<List<HabitacionResponseDto>> getOccupiedRooms() {
         return ResponseEntity.status(HttpStatus.OK).body(habitacionService.getOccupiedRooms());
+    }
+
+    @GetMapping("/reservas/usuario")
+    public ResponseEntity<String> getOccupiedRoomOfUser(
+            @RequestBody ReservasUsuarioRequestDto dto
+    ) {
+        return ResponseEntity.status(HttpStatus.OK).body("Hola");
     }
 }
 
