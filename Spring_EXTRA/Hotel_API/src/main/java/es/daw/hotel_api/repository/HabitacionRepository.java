@@ -49,4 +49,6 @@ public interface HabitacionRepository extends JpaRepository<Habitacion, Long> {
             WHERE hab.ocupada = true
     """)
     List<HabitacionResponseDto> findByOccupiedRoom();
+
+    List<HabitacionResponseDto> getReservationsUserRoom(String idUser);
 }
