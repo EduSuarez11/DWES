@@ -40,7 +40,7 @@ public class AuthMapper {
                 user.getFullName(),
                 user.getPassword(),
                 user.getEmail(),
-                user.getRole()
+                user.getRole().getName()
         );
     }
 

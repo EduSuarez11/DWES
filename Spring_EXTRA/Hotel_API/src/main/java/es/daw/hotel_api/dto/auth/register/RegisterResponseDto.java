@@ -7,5 +7,5 @@ public record RegisterResponseDto(
         String fullName,
         String password,
         String email,
-        Role role
+        String role
 ) {}
