@@ -49,5 +49,9 @@ public class AuthController {
         return ResponseEntity.status(HttpStatus.OK).body(authService.findAllUsers());
     }
 
+    @PostMapping("/login")
+    public ResponseEntity<AuthResponse> login(@RequestBody AuthRequest request) {
+        return ResponseEntity.status(HttpStatus.OK).body(authService.login(request));
+    }
 
 }
